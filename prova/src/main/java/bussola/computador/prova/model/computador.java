@@ -2,20 +2,19 @@ package bussola.computador.prova.model;
 
 import jakarta.persistence.*;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping
 @Entity
 @Repository
-public class modelComputador {
+public class computador {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String cor;
+    private String computador;
     private Integer dataFabricacao;
 
     public Long getId() {
@@ -26,6 +25,13 @@ public class modelComputador {
         this.id = id;
     }
 
+    public String getComputador() {
+        return computador;
+    }
+
+    public void setComputador(String computador) {
+        this.computador = computador;
+    }
 
     public String getNome() {
         return nome;
@@ -51,6 +57,6 @@ public class modelComputador {
         this.dataFabricacao = dataFabricacao;
     }
 
-    public modelComputador() {
+    public computador() {
     }
 }

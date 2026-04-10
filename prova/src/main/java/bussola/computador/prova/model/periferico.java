@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 @Entity
 @Repository
-public class modelPeriferico {
+public class periferico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +33,7 @@ public class modelPeriferico {
         this.periferico = periferico;
     }
 
-    public modelPeriferico(String periferico) {
+    public periferico(String periferico) {
         this.periferico = periferico;
     }
 }
